@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6aea28420c694a21b53b0aad4c7ad44c" Name="Diagram1">
+        <EntityTypeShape EntityType="AstroGearsModel.AspectInterpretation" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.AspectInterpretationType" Width="1.5" PointX="3" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.Aspect" Width="1.5" PointX="3" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.CelestialObject" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.CelestialObjectType" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.ChartAngle" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.ChartHouse" Width="1.5" PointX="8.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.ChartObject" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.ChartType" Width="1.5" PointX="3.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.Element" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.EnteredChart" Width="1.5" PointX="6" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.HouseAngle" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.HouseCusp" Width="1.5" PointX="6" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.HouseSystem" Width="1.5" PointX="6" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.Orientation" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.Quality" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.RelocatedChartAngle" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.RelocatedChartHous" Width="1.5" PointX="8.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.RelocatedChart" Width="1.5" PointX="6" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.Sign" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AstroGearsModel.vCelestialObjectType" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="AstroGearsModel.FK_AspectInterpretations_AspectInterpretationTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_AspectInterpretations_AspectInterpretationTypes1" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_AspectInterpretations_Aspects" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_AspectInterpretations_CelestialObjects1" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_AspectInterpretations_CelestialObjects2" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_AspectInterpretations_HouseAngles1" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_AspectInterpretations_HouseAngles2" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_CelestialObject_CelestialObjectTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_ChartObjects_CelestialObject" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_ChartAngles_EnteredCharts" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_ChartAngles_HouseAngles" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_ChartAngles_Signs" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_ChartHouses_EnteredCharts" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_ChartHouses_HouseCusps" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_ChartHouses_HouseSystems" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_ChartHouses_Signs" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_ChartObjects_EnteredCharts" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_ChartObjects_Orientations" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_ChartObjects_Signs" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_EnteredCharts_ChartTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_Signs_Elements" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_RelocatedChartAngles_EnteredCharts" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_RelocatedChartHouses_EnteredCharts" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_RelocatedCharts_EnteredCharts" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_RelocatedChartAngles_HouseAngles" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_RelocatedChartHouses_HouseAngles" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_RelocatedChartHouses_HouseSystems" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_Signs_Qualities" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_RelocatedChartAngles_RelocatedCharts" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_RelocatedChartAngles_Signs" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_RelocatedChartHouses_RelocatedCharts" ManuallyRouted="false" />
+        <AssociationConnector Association="AstroGearsModel.FK_RelocatedChartHouses_Signs" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

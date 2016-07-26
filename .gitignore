@@ -156,7 +156,10 @@ $RECYCLE.BIN/
 .DS_Store
 
 .localhistory/
+packages/
 
 web.config
 web.debug.config
 web.release.config
+
+node_modules/
