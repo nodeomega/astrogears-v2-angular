@@ -398,6 +398,8 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
+    <None Include="Properties\PublishProfiles\astrogearsdemo - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\astrogearsdemo - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1219,6 +1221,13 @@
     <Content Include="Views\EnteredCharts\Index.cshtml" />
     <Content Include="Views\EnteredCharts\Synastry.cshtml" />
     <Content Include="Views\EnteredCharts\Transits.cshtml" />
+    <Content Include="Web.sample.config" />
+    <Content Include="Web.sample.Debug.config">
+      <DependentUpon>Web.sample.config</DependentUpon>
+    </Content>
+    <Content Include="Web.sample.Release.config">
+      <DependentUpon>Web.sample.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -164,4 +164,6 @@ web.release.config
 
 app.config
 
+PublishProfiles/
+
 node_modules/

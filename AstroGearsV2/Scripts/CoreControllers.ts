@@ -71,7 +71,8 @@ module Core {
                     var that = this;
                     that.scope.addingNewChart = true;
                     that.scope.GetChartTypesList();
-                    that.scope.addNewChart.ChartType = that.scope.chartTypeList[0];
+                    if (that.scope.ChartTypeList.length > 0)
+                        that.scope.addNewChart.ChartType = that.scope.chartTypeList[0];
                 });
 
                 this.scope.CloseCreateNewChartForm = (() => {

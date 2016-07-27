@@ -56,7 +56,8 @@ var Core;
                         var that = _this;
                         that.scope.addingNewChart = true;
                         that.scope.GetChartTypesList();
-                        that.scope.addNewChart.ChartType = that.scope.chartTypeList[0];
+                        if (that.scope.ChartTypeList.length > 0)
+                            that.scope.addNewChart.ChartType = that.scope.chartTypeList[0];
                     });
                     this.scope.CloseCreateNewChartForm = (function () {
                         var that = _this;
@@ -172,3 +173,4 @@ var Core;
         })(Controllers = Application.Controllers || (Application.Controllers = {}));
     })(Application = Core.Application || (Core.Application = {}));
 })(Core || (Core = {}));
+//# sourceMappingURL=CoreControllers.js.map

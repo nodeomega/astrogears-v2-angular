@@ -77,3 +77,4 @@ var Core;
         })(Services = Application.Services || (Application.Services = {}));
     })(Application = Core.Application || (Core.Application = {}));
 })(Core || (Core = {}));
+//# sourceMappingURL=coreservices.js.map
