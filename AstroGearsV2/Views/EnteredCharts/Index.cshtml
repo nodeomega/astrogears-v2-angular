@@ -1,0 +1,141 @@
+﻿@model IEnumerable<AstroGearsV2Data.Models.EnteredChart>
+
+@{
+    ViewBag.Title = "AstroGears | Entered Charts";
+}
+
+<h2>Index</h2>
+
+<div data-ng-app="astrogears" data-ng-controller="enteredChartsListingController as ecc" data-ng-cloak>
+    <input type="hidden" data-ng-init="GetEnteredChartsListing(true);" />
+    <p>
+        <a href="#" data-ng-click="OpenCreateNewChartForm();" title="Create New Entered Chart"><span class="fa fa-plus-circle"></span> Create New Entered Chart</a>
+    </p>
+
+    <div id="listingLoading" class="ajax-loader" data-ng-show="listingIsLoading">
+        <div style="position: relative; top: 200px;">
+            <img src="~/Images/ajax-loader-red-processing-medium.gif" alt="Loading..." title="Loading..." /> Loading...
+        </div>
+    </div>
+
+    <div id="status" data-ng-bind-html="errorMessage"></div>
+
+    <table class="table table-standard">
+        <thead>
+            <tr>
+                <th>
+                    Subject Name
+                </th>
+                <th>
+                    Birth/Event Location
+                </th>
+                <th>
+                    Birth/Event Time
+                </th>
+                <th>
+                    Chart Type
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="listingBody">
+        <tr data-ng-repeat="chart in enteredChartListing" data-ng-cloak>
+            <td>
+                {{chart.SubjectName}}
+            </td>
+            <td>
+                {{chart.SubjectLocation}}
+            </td>
+            <td>
+                {{chart.OriginDateTimeString}}
+            </td>
+            <td>
+                {{chart.ChartTypeName}}
+            </td>
+            <td>
+                <a href="#" title="Edit" data-ng-click="OpenEditChartForm(chart.EnteredChartId);"><span class="fa fa-edit"></span></a> | 
+                @*<a href="@Url.Action("Details", "EnteredCharts", new { id = item.EnteredChartId })" title="Details"><span class="fa fa-search"></span></a> |
+                <a href="@Url.Action("Transits", "EnteredCharts", new { id = item.EnteredChartId })" title="Transits"><span class="fa fa-arrows-alt"></span></a> |
+                <a href="@Url.Action("Synastry", "EnteredCharts", new { id = item.EnteredChartId })" title="Synastry"><span class="fa fa-star-half-o"></span></a> |
+                <a href="@Url.Action("Delete", "EnteredCharts", new { id = item.EnteredChartId })" title="Delete"><span class="fa fa-remove"></span></a>*@
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="container" data-ng-cloak>
+        <div class="col-md-6">
+            Results per page:
+            <select data-ng-model="currentEntriesPerPage" data-ng-options="option.value for option in entriesPerPage track by option.value" data-ng-cloak data-ng-change="GetEnteredChartsListing(true);"></select>
+        </div>
+        <div class="col-md-6">
+            Page <select data-ng-model="currentPageNumber" data-ng-options="option.value for option in numberOfPages track by option.value" data-ng-cloak data-ng-change="GetEnteredChartsListing(false);"></select> of <span data-ng-bind="totalPages"></span>
+        </div>
+    </div>
+
+    <add-new-entered-chart-modal data-modal="addingNewChart"></add-new-entered-chart-modal>
+
+    <edit-entered-chart-modal data-modal="editingChart"></edit-entered-chart-modal>
+
+    <div class="modal fade" id="deleteEnteredChartModal" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog">
+            <form>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Delete Entered Chart Data</h4>
+                    </div>
+                    <div class="modal-body form-horizontal container">
+                        <div class="interface-warning">
+                            <span class="fa fa-exclamation-triangle error"></span> This will be PERMANENTLY deleted!<br />Continue?
+                        </div>
+                        <hr />
+                        <div id="deleteStatus"></div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                Subject Name
+                            </label>
+                            <div class="col-md-10" id="deleteSubjectName"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                Birth/Event Location
+                            </label>
+                            <div class="col-md-10" id="deleteSubjectLocation"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                Birth/Event Date/Time
+                            </label>
+                            <div class="col-md-10" id="deleteOriginDateTime"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                Chart Type
+                            </label>
+                            <div class="col-md-10" id="deleteChartType"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                # of Chart Objects
+                            </label>
+                            <div class="col-md-10" id="deleteChartObjectsCount"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <input type="button" class="btn btn-primary" id="confirmEnteredChartDelete" value="Confirm Delete" />
+                        <input id="deleteEnteredChartId" type="hidden" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jquery-ui")
+    <script src="~/Scripts/outscript.js"></script>
+    @*<script src="~/Scripts/entered-charts.min.js"></script>*@
+}

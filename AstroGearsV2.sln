@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroGearsV2", "AstroGearsV2\AstroGearsV2.csproj", "{C82829FE-3C55-4351-90B0-FCBC155CFB7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroGearsV2Data", "AstroGearsV2Data\AstroGearsV2Data.csproj", "{DFFD2D47-18DA-404F-A3CF-15529C768E6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroGearsV2Api", "AstroGearsV2Api\AstroGearsV2Api.csproj", "{DF441815-8793-402B-8FA3-E2D9AFCD65B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C82829FE-3C55-4351-90B0-FCBC155CFB7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C82829FE-3C55-4351-90B0-FCBC155CFB7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C82829FE-3C55-4351-90B0-FCBC155CFB7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFFD2D47-18DA-404F-A3CF-15529C768E6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFFD2D47-18DA-404F-A3CF-15529C768E6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFFD2D47-18DA-404F-A3CF-15529C768E6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFFD2D47-18DA-404F-A3CF-15529C768E6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF441815-8793-402B-8FA3-E2D9AFCD65B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF441815-8793-402B-8FA3-E2D9AFCD65B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF441815-8793-402B-8FA3-E2D9AFCD65B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF441815-8793-402B-8FA3-E2D9AFCD65B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -182,7 +182,7 @@ textarea {
 }
 .ajax-loader {
   font-size: 2em;
-  display: none;
+  /*display: none;*/
   position: absolute;
   width: 100%;
   height: 600px;

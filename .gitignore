@@ -162,4 +162,6 @@ web.config
 web.debug.config
 web.release.config
 
+app.config
+
 node_modules/
